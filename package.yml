@@ -1,9 +1,11 @@
 name       : dcadec
 version    : 0.2.0
-release    : 3
+release    : 4
 source     :
     - https://github.com/foo86/dcadec/archive/v0.2.0.tar.gz : ed9d207fde3e8d576f3af8b0d1235b3371e315175757173689104efcaebf0d44
-license    : LGPL-2.1
+homepage   : https://formulae.brew.sh/formula/dcadec
+license    : LGPL-2.1-or-later
+component  : multimedia.codecs
 summary    : DTS Coherent Acoustics decoder with support for HD extensions
 description: |
     DTS Coherent Acoustics decoder with support for HD extensions

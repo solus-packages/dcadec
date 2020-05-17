@@ -2,14 +2,15 @@
     <Source>
         <Name>dcadec</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Albert Krenz</Name>
+            <Email>albert.krenz+solus@mailbox.org</Email>
         </Packager>
-        <License>LGPL-2.1</License>
+        <License>LGPL-2.1-or-later</License>
+        <PartOf>multimedia.codecs</PartOf>
         <Summary xml:lang="en">DTS Coherent Acoustics decoder with support for HD extensions</Summary>
         <Description xml:lang="en">DTS Coherent Acoustics decoder with support for HD extensions
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>dcadec</Name>
@@ -18,8 +19,9 @@
 </Description>
         <PartOf>multimedia.codecs</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.*</Path>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/dcadec</Path>
+            <Path fileType="library">/usr/lib/libdcadec.so.0</Path>
+            <Path fileType="library">/usr/lib/libdcadec.so.0.1.0</Path>
         </Files>
     </Package>
     <Package>
@@ -29,21 +31,24 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">dcadec</Dependency>
+            <Dependency release="4">dcadec</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/libdcadec/dca_context.h</Path>
+            <Path fileType="header">/usr/include/libdcadec/dca_frame.h</Path>
+            <Path fileType="header">/usr/include/libdcadec/dca_stream.h</Path>
+            <Path fileType="header">/usr/include/libdcadec/dca_waveout.h</Path>
+            <Path fileType="library">/usr/lib/libdcadec.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/dcadec.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2016-03-08</Date>
+        <Update release="4">
+            <Date>2020-05-13</Date>
             <Version>0.2.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Albert Krenz</Name>
+            <Email>albert.krenz+solus@mailbox.org</Email>
         </Update>
     </History>
 </PISI>
